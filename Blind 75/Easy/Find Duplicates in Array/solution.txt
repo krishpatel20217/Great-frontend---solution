@@ -1,0 +1,14 @@
+/**
+ * @param {number[]} numbers
+ * @return {boolean}
+ */
+export default function findDuplicates(numbers) {
+  let check = new Set();
+  for(let i=0;i<numbers.length;i++){
+    if(check.has(numbers[i])){
+      return true;
+    }
+    check.add(numbers[i]);
+  }
+  return false;
+}
